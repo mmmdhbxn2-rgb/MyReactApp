@@ -2,9 +2,13 @@ name: React Native Build
 
 on:
   push:
-    branches: [ main ]
+    branches: 
+      - main
+      - 'release/version-*'  # release/version-で始まるブランチ
   pull_request:
-    branches: [ main ]
+    branches: 
+      - main
+      - 'release/version-*'
 
 jobs:
   build-android:
